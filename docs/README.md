@@ -1,22 +1,34 @@
 ---
-
 home: true
-heroImage: /images/au.png # 显示在主页的图片
-tagline: 不积跬步无以至千里 # 显示在主页的标题
+heroImage: /hero.png
+actionText: 快速上手 →
+actionLink: /zh/guide/
+features:
+- title: 简洁至上
+  details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
+- title: Vue 驱动
+  details: 享受 Vue + webpack 的开发体验，可以在 Markdown 中使用 Vue 组件，又可以使用 Vue 来开发自定义主题。
+- title: 高性能
+  details: VuePress 会为每个页面预渲染生成静态的 HTML，同时，每个页面被加载的时候，将作为 SPA 运行。
+footer: MIT Licensed | Copyright © 2018-present Evan You
+---
 
-features: # 显示在主页的分类
+### 像数 1, 2, 3 一样容易
 
-- title: 前端总结
-  details: JavaScript、ES6、Vue 框架以及 html(5)/css(3)，前端页面相关技术
-  link: /web/
-  imgUrl: /images/web.png # 图片以 docs/.vuepress/public 为根节点
-- title: 学习笔记
-  details: Vue、axios、插件等源码的理解
-  link: /note/
-  imgUrl: /images/note.png
-- title: 项目积累
-  details: 开源的项目以及项目中遇到的问题及其解决方法
-  link: /project/
-  imgUrl: /images/project.png
+``` bash
+# 安装
+yarn global add vuepress # 或者：npm install -g vuepress
 
-footer: MIT Licensed | Copyright © 2021-present coderly
+# 新建一个 markdown 文件
+echo '# Hello VuePress!' > README.md
+
+# 开始写作
+vuepress dev .
+
+# 构建静态文件
+vuepress build .
+```
+
+::: warning 注意
+请确保你的 Node.js 版本 >= 8.6。
+:::
